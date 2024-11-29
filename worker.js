@@ -1,5 +1,8 @@
 export default {
     async fetch(request, env, ctx) {
-      return new Response('Hello World! made by king');
-    },
-  };
+                     const url = new URL(request.url);
+                     url.hostname = env.HOST || 'www.speedtest.net';
+                     url.protocol = 'https:';
+                     request = new Request(url, request);
+                     return fetch(request);
+           }
