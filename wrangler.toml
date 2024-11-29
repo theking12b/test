@@ -1,0 +1,5 @@
+name = "test-worker"
+type = "javascript"
+
+[[vars]]
+HOST = "www.speedtest.net"
